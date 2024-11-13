@@ -1,0 +1,21 @@
+https://learn.microsoft.com/en-gb/training/modules/access-data-azure-blob-storage-multiple-protocols/
+
+# Connect to the cluster via SSH.
+
+ssh _____________@clustername-ssh.azurehdinsight.net
+
+# Execute basic HDFS commands. Display the hierarchy.
+
+hdfs dfs -ls /
+
+# Create a sample directory.
+
+hdfs dfs -mkdir /samplefolder
+
+# Create a container
+
+hdfs dfs -D "fs.azure.createRemoteFileSystemDuringInitialization=true" -ls abfs://<container-name>@<storage-account-name>.dfs.core.windows.net/
+
+# Get a list of files or directories
+
+hdfs dfs -ls <path>
